@@ -4,7 +4,7 @@ const theme = {
   secondary: 'rgba(46, 229, 248, 1)',
   tertiary: 'rgba(56, 188, 219, 1)',
 
-  error: 'rgba(240, 0, 80, 1)',
+  error: 'x',
 
   bcs: '#20394E',
   slack: '#4A154B',

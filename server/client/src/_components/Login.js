@@ -89,6 +89,7 @@ class Login extends Component {
             props.checkToken().then(() => props.history.push('/'));
           }}>
 
+            <Label htmlFor="email">Email</Label>
             <Input
               id="email"
               name="email"
@@ -96,8 +97,8 @@ class Login extends Component {
               placeholder="BCS Email"
               onChange={ e => this.handleInputChange(e.target.name, e.target.value) }
             />
-            <Label htmlFor="email">Email</Label>
 
+            <Label htmlFor="password">Password</Label>
             <Input
               id="password"
               name="password"
@@ -105,7 +106,6 @@ class Login extends Component {
               placeholder="BCS Password"
               onChange={ e => this.handleInputChange(e.target.name, e.target.value) }
             />
-            <Label htmlFor="password">Password</Label>
 
             <Button type="submit">Login</Button>
 

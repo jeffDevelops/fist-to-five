@@ -1,12 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 const PORT = process.env.PORT || 3001;
 const app = express();
 const cors = require('cors');
 const sequelize = require('./models').sequelize;
 const socketIO = require('socket.io');
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   const server = app.listen(PORT, () => console.info(`✊  ✌️  ✋  running on ${PORT}`));
   const io = socketIO(server);
 
@@ -26,5 +27,10 @@ sequelize.sync({ force: true }).then(() => {
 
   app.use('/api', require('./api'));
   app.use('/slack', require('./slack'));
+
+  if (process.env.NODE_ENV === 'production') {
+    express.static('client/build');
+    app.use('/', (req, res) => res.sendFile(path.join(__dirname, 'client/build/index.html')));
+  }
 
 }).catch(error => console.error('Could not sync Sequelize with database: ', error));
