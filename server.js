@@ -28,7 +28,7 @@ sequelize.sync({ force: false }).then(() => {
   app.use('/api', require('./api'));
   app.use('/slack', require('./slack'));
 
-  app.use(express.static(path.join(__dirname + 'client/build')));
+  app.use(express.static(path.join(__dirname, 'client/build')));
   app.get('*', (req, res) => res.sendFile(path.join(__dirname + 'client/build/index.html')));
 
 
