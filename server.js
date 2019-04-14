@@ -30,7 +30,7 @@ sequelize.sync({ force: false }).then(() => {
 
   if (process.env.NODE_ENV === 'production') {
     express.static('client/build');
-    app.use('/', (req, res) => res.sendFile(path.join(__dirname, 'client/build/index.html')));
+    app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'client/build/index.html')));
   }
 
 }).catch(error => console.error('Could not sync Sequelize with database: ', error));
