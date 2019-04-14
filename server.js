@@ -29,8 +29,8 @@ sequelize.sync({ force: false }).then(() => {
   app.use('/slack', require('./slack'));
 
   if (process.env.NODE_ENV === 'production') {
-    express.static('client/build');
-    app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'client/build/index.html')));
+    app.use(express.static(path.join(__dirname + 'client/build')));
+    app.get('*', (req, res) => res.sendFile(path.join(__dirname + 'client/build/index.html')));
   }
 
 }).catch(error => console.error('Could not sync Sequelize with database: ', error));
