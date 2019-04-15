@@ -1,4 +1,7 @@
-# Fist To Five
+# [Fist To Five](https://trilogy-fist-to-five.herokuapp.com/)
+
+![LoginPage](./client/src/assets/login_page.png)
+
 #### Trilogy Hackathon Entry, 2019
 
 Fist To Five is an instructor- and TA-facing web client that sends Fist to Five prompts to their students via a Slack Interactive Message. When the instructor or TA submits a prompt to Slack, a Slack poll is opened for a sixty-second window and the client establishes a websocket connection, so that students' responses may be viewed in real-time.
