@@ -1,10 +1,11 @@
-export default (prompt, user, promptId) => ({
+export default (prompt, user, promptId, channel) => ({
   "title": `${prompt}`,
   "type": "interactive_message",
   "text": `${prompt}`,
-  "callback_id": "http://localhost:3001/slack",
+  "callback_id": "https://trilogy-fist-to-five.herokuapp.com/slack",
   "response_type": "ephemeral",
   "response_url": "https://hooks.slack.com/services/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",
+  "channel": "@Jeffery Reynolds",
   "attachments": [
     {
       "attachment_type": "default",
