@@ -36,8 +36,6 @@ class ProtectedRoute extends PureComponent {
     const { state } = this;
     const { component: Component, ...rest } = this.props;
 
-    console.log({ rest })
-
     if (state.loading) return <Loader />;
     if (!state.loading && !state.authToken) return <Redirect to="/login" />;
     if (!state.loading && !state.sessionExistsOnServer) return <Redirect to="/login" />;

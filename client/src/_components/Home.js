@@ -25,8 +25,6 @@ export default class Home extends Component {
 
     const { props } = this;
 
-    console.log({ user: props.user })
-    
     return (
       <Container>
         <Nav />
