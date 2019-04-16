@@ -51,7 +51,6 @@ class Login extends Component {
   render() {
 
     const { state, props } = this;
-    console.log({ props })
 
     return (
       <Container>

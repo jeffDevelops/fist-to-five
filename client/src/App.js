@@ -29,7 +29,6 @@ class App extends Component {
   componentDidUpdate(_, prevState) {
     // If state goes from *not logged in* to *logged in*, update the user using the BCS /me endpoint
     if (this.state.loggedIn && this.state.user && prevState.loggedIn !== this.state.loggedIn) {
-      console.log({ UPDATINGUSER: this.state.user });
       this.checkToken();
     }
   }

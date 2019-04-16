@@ -80,7 +80,6 @@ class Prompt extends Component {
   toggleDropdown = () => this.setState(prevState => ({ promptSubmitDropdownOpen: !prevState.promptSubmitDropdownOpen }));
 
   updateActivePrompts = data => {
-    console.log({ UPDATINGFROMSLACKRESPONSE: data })
     const activePrompts = [ ...this.state.activePrompts ];
     const indexToUpdate = activePrompts.map(prompt => prompt.id).indexOf(data.id);
     activePrompts.splice(indexToUpdate, 1, data);
@@ -106,7 +105,6 @@ class Prompt extends Component {
 
     const { state, props } = this;
 
-    console.log({ state, props });
     return (
       <Fragment>
         <Card margin="0 0 25px 0"> 

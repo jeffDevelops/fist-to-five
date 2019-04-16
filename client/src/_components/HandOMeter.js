@@ -47,32 +47,31 @@ const Count = styled.p`
 `;
 
 const HandOMeter = ({ prompt }) => {
-  console.log({ prompt });
   return (
     <Hands>
       <HandContainer>
-          <Fist height="65px" opacity=".4"/>
-          <Count>{ prompt.fists }</Count>
+        <Fist height="65px" opacity=".4"/>
+        <Count>{ prompt.fists }</Count>
       </HandContainer>
       <HandContainer>
-          <One height="90px" opacity=".4"/>
-          <Count>{ prompt.ones }</Count>
+        <One height="90px" opacity=".4"/>
+        <Count>{ prompt.ones }</Count>
       </HandContainer>
       <HandContainer>
-          <Two height="90px" opacity=".4"/>
-          <Count>{ prompt.twos }</Count>
+        <Two height="90px" opacity=".4"/>
+        <Count>{ prompt.twos }</Count>
       </HandContainer>
       <HandContainer>
-          <Three height="90px" opacity=".4"/>
-          <Count>{ prompt.threes }</Count>
+        <Three height="90px" opacity=".4"/>
+        <Count>{ prompt.threes }</Count>
       </HandContainer>
       <HandContainer>
-          <Four height="90px" opacity=".4"/>
-          <Count>{ prompt.fours }</Count>
+        <Four height="90px" opacity=".4"/>
+        <Count>{ prompt.fours }</Count>
       </HandContainer>
       <HandContainer>
-          <Five height="90px" opacity=".4"/>
-          <Count>{ prompt.fives }</Count>
+        <Five height="90px" opacity=".4"/>
+        <Count>{ prompt.fives }</Count>
       </HandContainer>
     </Hands>
   );
