@@ -41,10 +41,6 @@ export default (prompt, user, promptId) => ({
             {
               "text": "Five",
               "value": "Five",
-            },
-            {
-              "text": "Six",
-              "value": "Six",
             }
           ]
         },
