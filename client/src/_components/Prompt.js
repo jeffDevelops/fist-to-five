@@ -17,6 +17,8 @@ import axios from 'axios';
 import openSocket from 'socket.io-client';
 import createWebhookMessage from '../slack/webhookMessage';
 import determineServerHostname from '../environments/determineServerHostname';
+import determineEnv from '../environments/determineEnv';
+import slackConfig from '../slack/config';
 
 import { ReactComponent as HorizRule } from '../assets/fist_to_five_art.svg';
 import slackLogo from '../assets/slack-logo.png';
@@ -139,7 +141,7 @@ class Prompt extends Component {
 
             // Dispatch interactive Slack message
             const slackResponse = await axios.post(
-              'https://hooks.slack.com/services/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',
+              slackConfig[determineEnv()].responseUrl,
               createWebhookMessage(state.prompt, props.user, serverResponse.data.id),
               { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
             ).catch(error => console.error(error));
