@@ -28,6 +28,7 @@ http://7e7ad2c3.ngrok.io/slack
 In production, our forwarding url will be changed to our production url.
 
 That's it for this page. Click the green **Save Changes** button at the bottom right.
+
 7) Allocate a directory for this app locally, clone this repo, and start the server process:
 ```
 cd fist-to-five
@@ -40,8 +41,8 @@ cd client
 npm i
 npm run start
 ```
-
-
+8) No changes need to happen server-side, but we do need to adjust our Slack config client-side. The config variables to change can be found in `client/src/slack/config.js`. Under `DEV`, 1) update the `callbackId` value to reflect the development ngrok forwarding url, 2) update the `responseUrl` value to reflect the Incoming Webhook url (you can go to the Slack App dashboard, select **Incoming Webhooks**, and copy the webhook url to your clipboard for this), and 3) update the channel to reflect the channel you configured in step 3.
+9) Deploying a new instance would require you to update the `callbackId` to the deployed site's domain name.
 
 ### Tech Stack
 * React
