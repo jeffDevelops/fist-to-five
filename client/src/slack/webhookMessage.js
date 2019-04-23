@@ -11,7 +11,7 @@ export default (prompt, user, promptId, channel) => {
     "callback_id": callback_id,
     "response_type": "ephemeral",
     "response_url": response_url,
-    "channel": "@Jeffery Reynolds",
+    "channel": "bootcampspot-api",
     "attachments": [
       {
         "attachment_type": "default",
